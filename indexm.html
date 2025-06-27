@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" trending="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.main {
+    background-image: url(background.jpg);
+    height: 80vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+}
+
+.main .box {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.65;
+    background-color: black;
+    position: absolute;
+    top: 0;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90vw;
+    margin: auto;
+    padding: 28px;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.h {
+    height: 35px;
+    border-radius: 6px;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.w1 {
+    width: 130px;
+    background-color: rgb(0, 0, 0);
+    padding: 0px 30px;
+}
+
+.w2 {
+    width: 85px;
+}
+button{
+    cursor: pointer;
+    background-color: red;
+}
+img {
+    width: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+main,.membership {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    gap: 18px;
+    margin-top: 80px;
+    position: relative;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+.sline,.tline{
+    font-weight: bold;
+    text-align: center;
+}
+.login * {
+    border-radius: 6px;
+    font-weight: bolder;
+    height: 55px;
+    font-size: 16px;
+}
+.login{
+    display: flex;
+    gap: 10px;
+}
+
+.w3 {
+    width: 200px;
+    padding: 0px 20px;
+}
+.w4{
+    width: 150px;
+}
+.line{
+    height: 5px;
+    width: 100vw;
+    background-color: gray;
+}
+.bold{
+    font-weight: bold;
+}
+.trending ul li{
+    list-style: none;
+    height: 150px;
+    width: 120px;
+    border-radius: 70px;
+    /* background-color: aqua; */
+}
+.trending ul {
+    margin: 15px 0px 30px 12px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    width: 83vw;
+    align-items: center;
+}
+#sidearrow{
+    height:110px;
+    width: 25px;
+    background-color: gray;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.no {
+    font-size: 65px;
+    position: relative;
+    top: -73px;
+    left: -4px;
+    z-index: 15;
+    background: none;
+    color: black;
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+.trending button{
+    background-color: black;
+    border: none;
+}
+img{
+    border-radius: 5px;
+}
+.alignarrow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.reason,.question,.trending{
+    max-width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.question{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.rec{
+    height: 170px;
+    width: 90vw;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    border-radius: 20px;
+    }
+.rec *{
+    background: none;
+}
+.mar{
+    margin: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.flexend{
+    align-self: flex-end;
+    position: relative;
+    top: 20px;
+    left: 45px;
+}
+.que *{
+    background: none;
+    margin: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.plus{
+    font-size: 50px;
+}
+.que {
+    height: 70px;
+    width: 90vw;
+    margin: auto;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.que div{
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px;
+}.membership{
+    margin-top: 15px;
+}
+footer{
+    max-width: 90vw;
+    margin: auto;
+}
+.ques{
+    margin: 60px 0;
+}
+footer *{
+    color: #ffffff91;
+}
+.footer,.language{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 60px 0;
+}
+body{
+    margin: 0px 0px 100px 0px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <nav>
+                <span><img src="logo.svg" alt=""></span>
+                <ul>
+                    <li>
+                        <select class="w1 h" name="lang">
+                            <option value="english">English</option>
+                            <option value="hindi">hindi</option>
+                        </select>
+                    </li>
+                    <li><button class=" w2 h">sign in</button></li>
+                </ul>
+            </nav>
+            <main>
+                <h1>Unlimited movies, TV shows and more</h1>
+                <div class="sline">Starts at ₹149. Cancel at any time.</div>
+                <div class="tline">Ready to watch? Enter your email to create or restart your membership.</div>
+                <div class="login">
+                    <input class="h2 w3" type="text" placeholder="Email address">
+                    <button class="h2 w4">Get started</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="content">
+        <div class="trending">
+            <div class="bold">Trending now</div>
+            <div class="alignarrow">
+                <ul>
+                    <li>
+                        <button><img src="1st.jpg" alt=""></button>
+                        <span class="no">1</span>
+                    </li>
+                    <li>
+                        <button><img src="2ND.jpg" alt=""></button>
+                        <span class="no">2</span>
+                    </li>
+                    <li>
+                        <button><img src="3RD.jpg" alt=""></button>
+                        <span class="no">3</span>
+                    </li>
+                    <li>
+                        <button><img src="4TH.jpg" alt=""></button>
+                        <span class="no">4</span>
+                    </li>
+                    <li>
+                        <button><img src="5TH.jpg" alt=""></button>
+                        <span class="no">5</span>
+                    </li>
+                    <li>
+                        <button><img src="6TH.jpg" alt=""></button>
+                        <span class="no">6</span>
+                    </li>
+                </ul>
+                <div id="sidearrow">›</div>
+            </div>
+        </div>
+        <div class="reason">
+            <div class="bold">More reason to join</div>
+            <div class="rec">
+                <div class="mar">
+                    <h3>Enjoy on your TV</h3>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                    <img class="flexend" src="computer.svg" alt="">
+                </div>
+            </div>
+            <div class="rec">
+                <div class="mar">
+                    <h3>Download your shows to watch offline</h3>
+                    <p>Save your favourites easily and always have something to watch.</p>
+                    <img class="flexend" src="down.svg" alt="">
+                </div>
+            </div>
+            <div class="rec">
+                <div class="mar">
+                    <h3>Watch everywhere</h3>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                    <img class="flexend" src="watch.svg" alt="">
+                </div>
+            </div>
+            <div class="rec">
+                <div class="mar">
+                    <h3>Create profiles for kids</h3>
+                    <p>Send kids on adventures with their favourite characters in a space made just for them — free with
+                        your
+                        membership.</p>
+                    <img class="flexend" src="kid.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="bold">Frequently Asked Questions</div>
+            <div class="que">
+                <div>What is Netflix?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="que">
+                <div>How much the Netflix cost?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="que">
+                <div>What is Netflix?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="que">
+                <div>What is Netflix?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="que">
+                <div>What is Netflix?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="que">
+                <div>What is Netflix?</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="membership">
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="login">
+                    <input class="h2 w3" type="text" placeholder="Email address">
+                    <button class="h2 w4">Get started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ques">Questions? Call <a href="/">000-800-919-1743</a></div>
+        <div class="footer">
+            <div class="foot"><a href="/">FAQ</a></div>
+            <div class="foot"><a href="/">
+                Help Centre</a></div>
+            <div class="foot"><a href="/">Account</a></div>
+            <div class="foot"><a href="/">Media Centre</a></div>
+            <div class="foot"><a href="/">Investor Relations</a></div>
+            <div class="foot"><a href="/">Jobs</a></div>
+            <div class="foot"><a href="/">Ways to Watch</a></div>
+            <div class="foot"><a href="/">
+                Terms of Use</a></div>
+            <div class="foot"><a href="/">Privacy</a></div>
+            <div class="foot"><a href="/">Cookie Preferences</a></div>
+            <div class="foot"><a href="/">Corporate Information</a></div>
+            <div class="foot"><a href="/">
+                Contact Us</a></div>
+            <div class="foot"><a href="/">Speed Test</a></div>
+            <div class="foot"><a href="/">
+                Legal Notices</a></div>
+            <div class="foot"><a href="/">Only on Netflix</a></div>
+        </div>
+        <div class="language">
+            <select class="w1 h" name="lang">
+                <option value="english">English</option>
+                <option value="hindi">hindi</option>
+            </select>
+        </div>
+        <div>Netflix India</div>
+    </footer>
+</body>
+
+</html>
